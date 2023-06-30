@@ -13,7 +13,7 @@ public class PassiveMobStinkyEffects {
     
     public void makePassiveMobsRunAway(ServerPlayerEntity player, double distance) {
         Box box = player.getBoundingBox().expand(distance);
-        for (MobEntity mob : player.world.getEntitiesByClass(MobEntity.class, box, LivingEntity::isAlive)) {
+        for (MobEntity mob : player.getWorld().getEntitiesByClass(MobEntity.class, box, LivingEntity::isAlive)) {
             if (mob.canSee(player)) {
                 mob.setAttacker(player);
                 mob.getNavigation().setSpeed(1.5);

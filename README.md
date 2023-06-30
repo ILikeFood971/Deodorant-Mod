@@ -7,8 +7,8 @@
 The Deodorant Mod is a free and open source mod that adds a new deodorant item
 and changes the behavior of mobs depending on whether you have applied deodorant.
 
-⚠️ I am a very new modder and this is a brand new mod. There is a high likelyhood of there being
-multiple bugs and issues with the mod. If you run into any bugs please file an issue in the github repo.
+⚠️ I am a very new modder and this is a brand-new mod. There is a high likelyhood of there being
+multiple bugs and issues with the mod. If you run into any bugs please file an issue in the GitHub repo.
 
 ## What is it
 
@@ -33,6 +33,6 @@ the player applies deodorant or dies.
 
 You will need the fabric loader installed to load the mod. If you need help installing the mod, check out [this](https://fabricmc.net/wiki/install) link.
 
-You can downlaod the latest release from either [Modrinth](https://modrinth.com/mod/deodorant-mod) or from [Github releases](). I will likely update
+You can downlaod the latest release from either [Modrinth](https://modrinth.com/mod/deodorant-mod) or from [GitHub releases](). I will likely update
 this mod as new version of Minecraft come out and include new features, but understand that I am free to
 change my mind at any later date.

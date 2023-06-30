@@ -1,22 +1,16 @@
 package net.ilikefood971.deodorantmod.event;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.ilikefood971.deodorantmod.DeodorantMod;
 import net.ilikefood971.deodorantmod.behavior.NeutralMobStinkyEffects;
 import net.ilikefood971.deodorantmod.behavior.PassiveMobStinkyEffects;
 import net.ilikefood971.deodorantmod.util.StinkyData;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.text.Text;
 
 
 public class ServerTickHandler implements ServerTickEvents.StartWorldTick{
     private final NeutralMobStinkyEffects NEUTRAL_EFFECTS = new NeutralMobStinkyEffects();
     private final PassiveMobStinkyEffects PASSIVE_EFFECTS = new PassiveMobStinkyEffects();
-    // True = day
-    // False = night
-    private long previousTime = 0;
-    private long currentTime;
     
     @Override
     public void onStartTick(ServerWorld world) {
@@ -26,7 +20,9 @@ public class ServerTickHandler implements ServerTickEvents.StartWorldTick{
         }
     }
     private void checkForNewDay(ServerWorld world) {
-        currentTime = world.getTimeOfDay() % 24000;
+        // True = day
+        // False = night
+        long currentTime = world.getTimeOfDay() % 24000;
         if (currentTime == 0) {
             for (ServerPlayerEntity player : world.getPlayers()) {
                 StinkyData.setStinky(player, true);

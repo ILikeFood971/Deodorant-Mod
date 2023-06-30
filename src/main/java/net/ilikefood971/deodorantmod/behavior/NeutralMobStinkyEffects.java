@@ -13,7 +13,7 @@ public class NeutralMobStinkyEffects {
     public void makeNeutralMobsMad(ServerPlayerEntity player) {
         Box box = player.getBoundingBox().expand(128);
         
-        player.world.getEntitiesByClass(MobEntity.class, box, mob -> mob instanceof Angerable).forEach(mob -> {
+        player.getWorld().getEntitiesByClass(MobEntity.class, box, mob -> mob instanceof Angerable).forEach(mob -> {
             ((Angerable) mob).setAngryAt(player.getUuid());
             madMobs.add((Angerable) mob);
         });
@@ -22,7 +22,7 @@ public class NeutralMobStinkyEffects {
         Set<Angerable> tempLoop = new HashSet<>(madMobs);
         
         for (Angerable mob : tempLoop) {
-            if (mob.getAngryAt().equals(player.getUuid())) {
+            if (mob.getAngryAt() == (player.getUuid())) {
                 mob.forgive(player);
                 madMobs.remove(mob);
             }

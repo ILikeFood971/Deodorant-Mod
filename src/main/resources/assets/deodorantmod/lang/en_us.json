@@ -1,3 +1,5 @@
 {
-  "item.deodorantmod.deodorant": "Deodorant"
+  "item.deodorantmod.deodorant": "Deodorant",
+  "util.stinkydata.stinky" : "You stink. I would try to smell better before you encounter anything hostile...",
+  "util.stinkydata.clean" : "Good job! You applied deodorant!"
 }

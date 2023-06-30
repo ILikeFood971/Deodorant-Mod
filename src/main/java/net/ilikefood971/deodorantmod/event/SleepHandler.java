@@ -5,8 +5,6 @@ import net.ilikefood971.deodorantmod.DeodorantMod;
 import net.ilikefood971.deodorantmod.util.StinkyData;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 
 public class SleepHandler implements EntitySleepEvents.StopSleeping {

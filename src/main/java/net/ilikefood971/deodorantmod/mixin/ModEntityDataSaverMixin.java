@@ -22,6 +22,7 @@ public abstract class ModEntityDataSaverMixin implements IEntityDataSaver {
     }
     
     
+    @SuppressWarnings("rawtypes")
     @Inject(method = "writeNbt", at = @At("HEAD"))
     protected void injectWriteMethod(NbtCompound nbt, CallbackInfoReturnable info) {
         if (persistentData != null) {

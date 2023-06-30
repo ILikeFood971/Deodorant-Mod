@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "deodorantmod",
+	"version": "${version}",
+	"name": "Deodorant Mod",
+	"description": "This mod adds a new deodorant item that must be applied daily or else bad things happen",
+	"authors": [
+		"ILikeFood971"
+	],
+	"contact": {
+		"homepage": "https://github.com/ILikeFood971/",
+		"sources": "https://github.com/ILikeFood971/Deordorant-Mod"
+	},
+	"license": "MIT",
+	"icon": "assets/deodorantmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ilikefood971.deodorantmod.DeodorantMod"
+		],
+		"client": [
+			"net.ilikefood971.deodorantmod.DeodorantModClient"
+		],
+		"fabric-datagen": [
+			"net.ilikefood971.deodorantmod.DeodorantModDataGenerator"
+		]
+	},
+	"mixins": [
+		"deodorantmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

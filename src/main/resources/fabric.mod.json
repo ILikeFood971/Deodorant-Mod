@@ -11,7 +11,7 @@
 		"homepage": "https://github.com/ILikeFood971/",
 		"sources": "https://github.com/ILikeFood971/Deordorant-Mod"
 	},
-	"license": "MIT",
+	"license": "GPL 3.0",
 	"icon": "assets/deodorantmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
